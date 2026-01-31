@@ -311,3 +311,70 @@ button:hover {
     grid-auto-columns: minmax(160px, 1fr);
   }
 }
+
+@media (max-width: 768px) {
+  .app {
+    padding: 20px 16px 60px;
+  }
+
+  .topbar {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 34px;
+  }
+
+  .search-row {
+    grid-template-columns: 1fr;
+  }
+
+  .row-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row-actions {
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .app {
+    padding: 16px 12px 50px;
+  }
+
+  .topbar {
+    border-radius: 16px;
+  }
+
+  .logo {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+  }
+
+  .shelf {
+    grid-auto-columns: minmax(140px, 1fr);
+    gap: 10px;
+  }
+
+  .card {
+    padding: 40px 12px 12px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
