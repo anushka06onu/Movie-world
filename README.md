@@ -15,10 +15,11 @@ A Netflix‑style mini recommender made with plain HTML, CSS and JavaScript. I b
 - CSS
 - JavaScript (Vanilla)
 
-## Dataset
-- Movie list is built from the MovieLens 100K dataset (top 1200 by popularity)
-- Series list is added manually to the dataset file
-- All data is stored locally in `data.js`
+## Dataset (source + how I used it)
+- **Source:** MovieLens 100K dataset by GroupLens. I downloaded it from the official GroupLens site.
+- **How I used it:** I parsed the `u.item` (movie titles + genres) and `u.data` (ratings) files, then computed average ratings and rating counts for each movie.
+- **How it became a small ML project:** I used those ratings to build a simple recommender that scores movies based on popularity, genre match, and similarity to the watched list. Then I moved that logic into JavaScript and displayed results in a web UI.
+- **What’s included:** The top 1200 movies are saved into `data.js`. I also manually added a small list of series.
 
 ## How I built it 
 1. **Created a basic recommender** in Python first to understand similarity and scoring.
@@ -44,6 +45,8 @@ Open `http://localhost:8000`
 - `style.css` — full UI styling
 - `app.js` — recommendation logic + UI behavior
 - `data.js` — local dataset (movies + series)
+- `ml-100k/` — original MovieLens dataset files
+- `ml-100k.zip` — the original dataset archive
 
 ## Credits
 Made by **Fateha Hossain Anushka**.
