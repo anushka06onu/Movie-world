@@ -20,7 +20,7 @@ A Netflix‑style mini recommender made with plain HTML, CSS and JavaScript. I b
 - Series list is added manually to the dataset file
 - All data is stored locally in `data.js`
 
-## How I built it (student steps)
+## How I built it 
 1. **Created a basic recommender** in Python first to understand similarity and scoring.
 2. **Moved to a web app** so it can be published on Vercel as a static site.
 3. **Designed the UI** in HTML + CSS to look like a streaming service.
