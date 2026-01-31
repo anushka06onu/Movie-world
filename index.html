@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anushka's Movie World</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <main class="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="logo">Anushka's Movie World</span>
+          <span class="tag">Netflix-style picks</span>
+        </div>
+        <div class="search-block">
+          <label for="search">Search any movie or series</label>
+          <div class="search-row">
+            <input id="search" type="text" placeholder="Try: Interstellar, Dark, The Office..." />
+            <button id="search-btn" class="primary">Search</button>
+          </div>
+        </div>
+        <div class="filters">
+          <div class="filter-group">
+            <span class="filter-label">Type</span>
+            <div id="type-list" class="chips"></div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Genres</span>
+            <div id="genre-list" class="chips"></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="row">
+        <div class="row-head">
+          <h2>Top 10 Trending Worldwide</h2>
+          <span class="row-sub">From local dataset</span>
+        </div>
+        <div id="trending" class="shelf"></div>
+      </section>
+
+      <section class="row">
+        <div class="row-head">
+          <h2>Top 10 For You · Movies</h2>
+          <div class="row-actions">
+            <span id="watched-count" class="pill">0 watched</span>
+            <button id="refresh" class="ghost">Refresh</button>
+            <button id="more" class="ghost">More</button>
+          </div>
+        </div>
+        <div id="for-you-movies" class="shelf"></div>
+        <div id="for-you-more-movies" class="grid"></div>
+      </section>
+
+      <section class="row">
+        <div class="row-head">
+          <h2>Top 10 For You · Series</h2>
+        </div>
+        <div id="for-you-series" class="shelf"></div>
+        <div id="for-you-more-series" class="grid"></div>
+      </section>
+
+      <section class="row">
+        <div class="row-head">
+          <h2>Watched</h2>
+          <button id="clear-watched" class="ghost">Clear</button>
+        </div>
+        <div id="watched" class="shelf small"></div>
+      </section>
+
+      <section class="row">
+        <div class="row-head">
+          <h2>Search Results</h2>
+          <span id="search-count" class="row-sub">Type to search</span>
+        </div>
+        <div id="search-results" class="grid"></div>
+      </section>
+    </main>
+    <footer class="credit">
+      Made by Fateha Hossain Anushka
+    </footer>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
