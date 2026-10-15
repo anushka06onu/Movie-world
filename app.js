@@ -133,7 +133,8 @@ function renderChips(container, items, selected, onChange) {
 
 function cardHTML(item, rank) {
   const imdb = imdbValue(item)
-  const meta = `${typeLabel(normalizeType(item))} • IMDb ${imdb}`
+  const ratingLabel = item.imdbRating && item.imdbRating !== "N/A" ? `IMDb ${imdb}/10` : `Dataset rating ${imdb}/5`;
+  const meta = `${typeLabel(normalizeType(item))} • ${ratingLabel}`
   const watchText = isWatched(item) ? "Watched" : "Mark watched"
   const rankEl = rank ? `<div class="rank">${rank}</div>` : ""
   return `
